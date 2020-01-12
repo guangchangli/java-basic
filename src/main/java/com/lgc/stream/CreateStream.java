@@ -34,10 +34,6 @@ public class CreateStream {
 
         // 3. bufferedReaders
 
-
-
-
-
 //  --------------- 流的类型
         // 1.普通流
         List<String> strs = new ArrayList<>();
