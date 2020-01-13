@@ -14,7 +14,6 @@ public class InsertSort {
             if (arr[i]<arr[i-1]){
                 for (int j = 0; j < i-1; j++) {
                     if (arr[j]<arr[i]){
-                        arr[]
                     }
                 }
             }
