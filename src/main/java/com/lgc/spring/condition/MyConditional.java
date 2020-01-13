@@ -11,7 +11,8 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class MyConditional implements Condition {
     @Override
     public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
-        if (conditionContext.getEnvironment().getProperty("os.name").contains("Mac")) {
+        if (conditionContext.getEnvironment().getProperty("os.name").contains("Mac")
+                || conditionContext.getEnvironment().getActiveProfiles().equals("dev")) {
             return true;
         }
         return false;
