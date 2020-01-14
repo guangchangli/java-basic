@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e6444f5-a075-48d3-b70d-1a929500130a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/lambda/FunctionalInterfaceDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/lambda/LambdaInCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/spring/aop/AopConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/spring/aop/AopTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/BaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/MyInvocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/ProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/StaticDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/StaticProxyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lgc/spring/condition/MyConditional.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lgc/spring/condition/MyConditional.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lgc/test/SpringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lgc/test/SpringTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LambdaInCollection">
+  <component name="RunManager" selected="Application.ProxyFactory">
     <configuration name="LambdaInCollection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lgc.lambda.LambdaInCollection" />
       <module name="java-basic" />
@@ -82,12 +83,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lgc.sort.SelectSort" />
+    <configuration name="ProxyFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.proxy.ProxyFactory" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lgc.sort.*" />
+          <option name="PATTERN" value="com.lgc.pattern.proxy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,17 +96,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticProxyDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.proxy.StaticProxyDao" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lgc.test.*" />
+          <option name="PATTERN" value="com.lgc.pattern.proxy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lgc.test" />
-      <option name="MAIN_CLASS_NAME" value="com.lgc.test.SpringTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,19 +146,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SelectSort" />
-      <item itemvalue="JUnit.SpringTest" />
+      <item itemvalue="Application.LambdaInCollection" />
+      <item itemvalue="Application.StaticProxyDao" />
+      <item itemvalue="Application.ProxyFactory" />
       <item itemvalue="JUnit.SpringTest.testCondition" />
       <item itemvalue="JUnit.SpringTest.testProfile" />
-      <item itemvalue="Application.LambdaInCollection" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProxyFactory" />
+        <item itemvalue="Application.StaticProxyDao" />
         <item itemvalue="Application.LambdaInCollection" />
         <item itemvalue="JUnit.SpringTest.testProfile" />
         <item itemvalue="JUnit.SpringTest.testCondition" />
-        <item itemvalue="JUnit.SpringTest" />
-        <item itemvalue="Application.SelectSort" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +175,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -193,7 +192,8 @@
       <workItem from="1578533793562" duration="1285000" />
       <workItem from="1578635152829" duration="40000" />
       <workItem from="1578814516756" duration="1988000" />
-      <workItem from="1578878774704" duration="14350000" />
+      <workItem from="1578878774704" duration="14681000" />
+      <workItem from="1578968418780" duration="4189000" />
     </task>
     <servers />
   </component>
@@ -209,53 +209,61 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="516" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1578886131557" />
-    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1578886070259">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1578971257318">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1578886070259" />
-    <state width="1638" height="126" key="GridCell.Tab.0.bottom" timestamp="1578901867428">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1578971257318" />
+    <state width="1638" height="242" key="GridCell.Tab.0.bottom" timestamp="1578986142058">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="126" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578901867428" />
+    <state width="1638" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142058" />
     <state width="1638" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934648" />
-    <state width="1638" height="126" key="GridCell.Tab.0.center" timestamp="1578901867427">
+    <state width="1638" height="242" key="GridCell.Tab.0.center" timestamp="1578986142056">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="126" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578901867427" />
+    <state width="1638" height="242" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142056" />
     <state width="1638" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934647" />
-    <state width="1638" height="126" key="GridCell.Tab.0.left" timestamp="1578901867426">
+    <state width="1638" height="242" key="GridCell.Tab.0.left" timestamp="1578986142054">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="126" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578901867426" />
+    <state width="1638" height="242" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142054" />
     <state width="1638" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934647" />
-    <state width="1638" height="126" key="GridCell.Tab.0.right" timestamp="1578901867427">
+    <state width="1638" height="242" key="GridCell.Tab.0.right" timestamp="1578986142057">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="126" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578901867427" />
+    <state width="1638" height="242" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142057" />
     <state width="1638" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934648" />
-    <state width="1638" height="403" key="GridCell.Tab.1.bottom" timestamp="1578899885161">
+    <state width="1638" height="403" key="GridCell.Tab.1.bottom" timestamp="1578904221867">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="403" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578899885161" />
-    <state width="1638" height="403" key="GridCell.Tab.1.center" timestamp="1578899885161">
+    <state width="1638" height="403" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578904221867" />
+    <state width="1638" height="403" key="GridCell.Tab.1.center" timestamp="1578904221867">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="403" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578899885161" />
-    <state width="1638" height="403" key="GridCell.Tab.1.left" timestamp="1578899885160">
+    <state width="1638" height="403" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578904221867" />
+    <state width="1638" height="403" key="GridCell.Tab.1.left" timestamp="1578904221866">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="403" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578899885160" />
-    <state width="1638" height="403" key="GridCell.Tab.1.right" timestamp="1578899885161">
+    <state width="1638" height="403" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578904221866" />
+    <state width="1638" height="403" key="GridCell.Tab.1.right" timestamp="1578904221867">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="403" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578899885161" />
+    <state width="1638" height="403" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578904221867" />
     <state x="328" y="106" key="SettingsEditor" timestamp="1578898500439">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1578898500439" />
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1578902069784">
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1578969087694">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578902069784" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578969087694" />
+    <state x="630" y="445" key="svn.upgradeDialog" timestamp="1578972249475">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="630" y="445" key="svn.upgradeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578972249475" />
+    <state x="594" y="398" key="svn4idea.checkout.options" timestamp="1578972248179">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="594" y="398" key="svn4idea.checkout.options/0.0.1680.1050@0.0.1680.1050" timestamp="1578972248179" />
   </component>
 </project>
