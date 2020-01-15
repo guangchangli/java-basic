@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e6444f5-a075-48d3-b70d-1a929500130a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/BaseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/MyInvocationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/ProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/StaticDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/proxy/StaticProxyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/jvm/StringLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/java-basic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/java-basic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/java-basic.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lgc/pattern/proxy/StaticProxyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lgc/pattern/proxy/StaticProxyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataSource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/java-basic.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProxyFactory">
+  <component name="RunManager" selected="Application.StringLocation">
     <configuration name="LambdaInCollection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lgc.lambda.LambdaInCollection" />
       <module name="java-basic" />
@@ -109,20 +109,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringTest.testCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringLocation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.jvm.StringLocation" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lgc.test.*" />
+          <option name="PATTERN" value="com.lgc.jvm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lgc.test" />
-      <option name="MAIN_CLASS_NAME" value="com.lgc.test.SpringTest" />
-      <option name="METHOD_NAME" value="testCondition" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,16 +144,16 @@
       <item itemvalue="Application.LambdaInCollection" />
       <item itemvalue="Application.StaticProxyDao" />
       <item itemvalue="Application.ProxyFactory" />
-      <item itemvalue="JUnit.SpringTest.testCondition" />
       <item itemvalue="JUnit.SpringTest.testProfile" />
+      <item itemvalue="Application.StringLocation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringLocation" />
         <item itemvalue="Application.ProxyFactory" />
         <item itemvalue="Application.StaticProxyDao" />
         <item itemvalue="Application.LambdaInCollection" />
         <item itemvalue="JUnit.SpringTest.testProfile" />
-        <item itemvalue="JUnit.SpringTest.testCondition" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +189,8 @@
       <workItem from="1578814516756" duration="1988000" />
       <workItem from="1578878774704" duration="14681000" />
       <workItem from="1578968418780" duration="4189000" />
+      <workItem from="1579001036257" duration="88000" />
+      <workItem from="1579053265962" duration="2049000" />
     </task>
     <servers />
   </component>
@@ -213,25 +210,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1578971257318" />
-    <state width="1638" height="242" key="GridCell.Tab.0.bottom" timestamp="1578986142058">
+    <state x="423" y="123" key="CommitChangelistDialog2" timestamp="1579001039775">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142058" />
+    <state x="423" y="123" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1579001039775" />
+    <state width="1638" height="242" key="GridCell.Tab.0.bottom" timestamp="1579054427053">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1579054427053" />
     <state width="1638" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934648" />
-    <state width="1638" height="242" key="GridCell.Tab.0.center" timestamp="1578986142056">
+    <state width="1638" height="242" key="GridCell.Tab.0.center" timestamp="1579054427052">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="242" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142056" />
+    <state width="1638" height="242" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1579054427052" />
     <state width="1638" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934647" />
-    <state width="1638" height="242" key="GridCell.Tab.0.left" timestamp="1578986142054">
+    <state width="1638" height="242" key="GridCell.Tab.0.left" timestamp="1579054427048">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="242" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142054" />
+    <state width="1638" height="242" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1579054427048" />
     <state width="1638" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934647" />
-    <state width="1638" height="242" key="GridCell.Tab.0.right" timestamp="1578986142057">
+    <state width="1638" height="242" key="GridCell.Tab.0.right" timestamp="1579054427053">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="242" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578986142057" />
+    <state width="1638" height="242" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1579054427053" />
     <state width="1638" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934648" />
     <state width="1638" height="403" key="GridCell.Tab.1.bottom" timestamp="1578904221867">
       <screen x="0" y="0" width="1680" height="1050" />
