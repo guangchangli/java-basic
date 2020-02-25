@@ -13,6 +13,7 @@ import java.util.stream.Stream;
 
 /**
  * 创建流
+ *
  * @author lgc
  * @create 2020-01-06 6:02 下午
  **/
@@ -43,12 +44,12 @@ public class CreateStream {
         // 3.空
         Stream<Object> empty = Stream.empty();
         // 4.无限流
-        Stream.generate(()->"number"+new Random().nextInt()).limit(100).forEach(System.out::println);
-        Stream.generate(()->new Student("name",10)).limit(20).forEach(System.out::println);
+        Stream.generate(() -> "number" + new Random().nextInt()).limit(100).forEach(System.out::println);
+        Stream.generate(() -> new Student("name", 10)).limit(20).forEach(System.out::println);
 
         //产生规律数据
-        Stream.iterate(0,x->x+1).limit(10).forEach(System.out::println);
-        Stream.iterate(0,x->x).limit(10).forEach(System.out::println);
+        Stream.iterate(0, x -> x + 1).limit(10).forEach(System.out::println);
+        Stream.iterate(0, x -> x).limit(10).forEach(System.out::println);
         //Stream.iterate(0,x->x).limit(10).forEach(System.out::println);与如下代码意思是一样的
         Stream.iterate(0, UnaryOperator.identity()).limit(10).forEach(System.out::println);
 

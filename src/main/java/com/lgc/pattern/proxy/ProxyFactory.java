@@ -8,7 +8,8 @@ import java.lang.reflect.Proxy;
 
 /**
  * jdk动态代理
- *   代理对象要实现接口
+ * 代理对象要实现接口
+ *
  * @author lgc
  * @create 2020-01-14 10:29 上午
  **/

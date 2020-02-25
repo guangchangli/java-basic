@@ -112,26 +112,26 @@ public class LambdaInCollection {
         System.out.println(st);
     }
 
-    static void sort(){
+    static void sort() {
         ArrayList<String> list = new ArrayList<>(Arrays.asList("shi", "ni,an", "zhi", "qi,an"));
         System.out.println(list);
         Collections.sort(list, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                return o1.length()-o2.length();
+                return o1.length() - o2.length();
             }
         });
         System.out.println(list);
         System.out.println("-----lambda-----");
         List<String> strings = Arrays.asList("ke", "sou", "zh,en", "nan", "sh,ou");
         System.out.println(strings);
-        strings.sort((s1,s2)->s1.length()-s2.length());
+        strings.sort((s1, s2) -> s1.length() - s2.length());
         System.out.println(strings);
         strings.sort(Comparator.comparingInt(String::length));
         System.out.println(strings);
     }
 
-    static void spliterator(){
+    static void spliterator() {
         List<String> strings = Arrays.asList("左", "夜", "雨疏风骤", "试问", "卷帘人", "却道", "海棠依旧");
         Spliterator<String> spliterator = strings.spliterator();
         spliterator.forEachRemaining(s -> System.out.println(s));

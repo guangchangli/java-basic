@@ -14,10 +14,9 @@ import javax.annotation.PostConstruct;
 public class CustomerLifeCycleConfig {
 
 
-
-    @Bean(initMethod = "initCat",destroyMethod = "destroyCar")
+    @Bean(initMethod = "initCat", destroyMethod = "destroyCar")
     @Lazy
-    public Car redCar(){
+    public Car redCar() {
         System.out.println("------config start inject redCar------");
         return Car.builder().name("Audi").county("G").price(500000).build();
     }

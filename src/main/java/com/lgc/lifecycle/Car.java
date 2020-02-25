@@ -13,7 +13,7 @@ import javax.annotation.PreDestroy;
  **/
 @Data
 @Builder
-public class Car implements InitializingBean{
+public class Car implements InitializingBean {
     private String name;
     private String county;
     private int price;
@@ -22,12 +22,14 @@ public class Car implements InitializingBean{
     public void afterPropertiesSet() throws Exception {
         System.out.println("---2.cat propertiesSet finished");
     }
+
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println("---1.after car construct");
     }
+
     @PreDestroy
-    public void destroy(){
+    public void destroy() {
         System.out.println("---4.ready to destroy car");
     }
 

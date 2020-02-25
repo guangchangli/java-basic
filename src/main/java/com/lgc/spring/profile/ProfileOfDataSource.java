@@ -16,6 +16,7 @@ import java.beans.PropertyVetoException;
 /**
  * 多环境
  * -Dspring.profiles.active=dev
+ *
  * @author lgc
  * @create 2020-01-13 11:18 上午
  **/
@@ -23,6 +24,9 @@ import java.beans.PropertyVetoException;
 @Configuration
 public class ProfileOfDataSource implements EmbeddedValueResolverAware {
 
+    /**
+     *  value 0. 基本树值 1.spel #{} 2.${} 运行环境配置文件中的值
+     */
     @Value("${dataSource.user}")
     private String user;
 
@@ -36,6 +40,7 @@ public class ProfileOfDataSource implements EmbeddedValueResolverAware {
         comboPooledDataSource.setDriverClass("com.mysql.jdbc.Driver");
         return comboPooledDataSource;
     }
+
     @Profile("dev")
     @Bean("devDataSource")
     public DataSource dataSourceDev() throws PropertyVetoException {

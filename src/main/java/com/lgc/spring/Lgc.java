@@ -12,25 +12,26 @@ import javax.annotation.PreDestroy;
  * @author lgc
  * @create 2020-01-13 9:31 上午
  **/
-public class Lgc implements InitializingBean, DisposableBean , BeanPostProcessor {
+public class Lgc implements InitializingBean, DisposableBean, BeanPostProcessor {
     public Lgc() {
         System.out.println("lgc no args construct");
     }
 
-    public void init(){
+    public void init() {
         System.out.println("lgc`c init method out");
     }
 
-    public void destroy1(){
+    public void destroy1() {
         System.out.println("lgc`s destroy method out");
     }
 
     @PostConstruct
-    public void init2(){
+    public void init2() {
         System.out.println("lgc post construct out");
     }
+
     @PreDestroy
-    public void destroy2(){
+    public void destroy2() {
         System.out.println("lgc pre destroy out");
     }
 

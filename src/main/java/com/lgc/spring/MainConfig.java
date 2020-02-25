@@ -11,7 +11,7 @@ import org.springframework.context.annotation.*;
 @ComponentScan("com.lgc.spring")
 //@Import({Lgc.class,MyImportSelector.class})
 public class MainConfig {
-//    @Lazy
+    //    @Lazy
     @Conditional(MyConditional.class)
     @Bean(initMethod = "init", destroyMethod = "destroy1")
     public Lgc lgc1() {

@@ -19,7 +19,7 @@ public class SelectSort {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[minIndex])
                     minIndex = j;
-               // continue;
+                // continue;
             }
             int temp = arr[minIndex];
             arr[minIndex] = arr[i];

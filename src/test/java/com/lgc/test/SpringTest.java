@@ -1,6 +1,8 @@
 package com.lgc.test;
-
-import com.lgc.spring.MainConfig;
+import com.lgc.spring.*;
+import com.lgc.spring.autoconfig.SpringAutoConfig;
+import com.lgc.spring.autoconfig.service.NameService;
+import com.lgc.spring.autoconfig.web.NameController;
 import com.lgc.spring.profile.ProfileOfDataSource;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author lgc
  * @create 2020-01-13 9:37 上午
  **/
-public class SpringTest{
+public class SpringTest {
     @Autowired
     ApplicationContext applicationContext;
 
@@ -31,7 +33,7 @@ public class SpringTest{
     }
 
     @Test
-    public void testProfile(){
+    public void testProfile() {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         annotationConfigApplicationContext.getEnvironment().setActiveProfiles("dev");
         annotationConfigApplicationContext.register(ProfileOfDataSource.class);
@@ -43,6 +45,17 @@ public class SpringTest{
             System.out.println(beanDefinitionName);
         }
         System.out.println("===== out springIoc beanDefinitionNames end");
+
+    }
+
+    @Test
+    public void testAutoConfig(){
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringAutoConfig.class);
+        NameController nameController = applicationContext.getBean(NameController.class);
+        System.out.println(nameController);
+        NameService nameService = applicationContext.getBean(NameService.class);
+        System.out.println(nameService);
+        applicationContext.close();
 
     }
 
