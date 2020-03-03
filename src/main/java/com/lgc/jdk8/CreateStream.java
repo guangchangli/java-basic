@@ -1,4 +1,4 @@
-package com.lgc.stream;
+package com.lgc.jdk8;
 
 import com.google.common.collect.Lists;
 import com.lgc.entity.Student;
