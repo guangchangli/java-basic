@@ -1,8 +1,13 @@
-package com.lgc.jdk8;
+package com.lgc.jdk.functioninterface;
 
+import com.google.common.collect.Lists;
+import com.lgc.jdk.functionInterface.User;
 import com.sun.tools.javac.util.Assert;
 
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 /**
  * @author lgc
@@ -11,8 +16,10 @@ public class OptionalDemo {
     public static void main(String[] args) {
         //createEmptyOptional();
 //        createInstance();
-        orElse();
+//        orElse();
 //        changeValue();
+//        filterDemo();
+        test();
     }
 
     static void createEmptyOptional() {
@@ -53,7 +60,7 @@ public class OptionalDemo {
         System.out.println("orELseGet不为空" + user3);
         User user4 = Optional.ofNullable(user).orElseGet(() -> log());
         System.out.println("orElseGet为空" + user4);
-        System.out.println(Optional.ofNullable(user).orElseThrow(()->new RuntimeException("npe")));
+        System.out.println(Optional.ofNullable(user).orElseThrow(() -> new RuntimeException("npe")));
         /**
          * user log
          * User(id=null, name=opt, phone=null, email=null)
@@ -78,7 +85,7 @@ public class OptionalDemo {
      * flatMap 返回optional类型
      */
     static void changeValue() {
-        User user = User.builder().build();
+        User user = User.builder().email("www@126.com").build();
 //        User user = null;
         User change = Optional.ofNullable(user).map(c -> {
                     c.setName(Optional.ofNullable(c.getName()).orElse("change"));
@@ -86,18 +93,41 @@ public class OptionalDemo {
                 }
         ).orElse(User.builder().name("else").build());
         String email = Optional.ofNullable(user).map(User::getEmail).orElse("default@gmail.com");
-        Optional<User> optionalUser = Optional.of(user);
-//        optionalUser.flatMap(OptionalDemo::flatMapMethod)
-        System.out.println(email);
 
+        System.out.println(email);
+        Optional<String> s1 = Optional.ofNullable(new User()).flatMap(user1 -> Optional.ofNullable(user1.getEmail()));
+        System.out.println(s1);
+        String s2 = Optional.ofNullable(user).flatMap(user1 -> Optional.ofNullable(user.getEmail())).get();
+        System.out.println("--" + s2);
         Optional<String> s = Optional.of("input");
+        System.out.println(Optional.ofNullable(user).flatMap(OptionalDemo::flatMapMethod).get());
         System.out.println(s.map(OptionalDemo::getOutput));
         System.out.println(s.flatMap(OptionalDemo::getOutputOpt));
     }
 
+    static void filterDemo() {
+        User qwe = User.builder().name("qwe").build();
+        Optional.ofNullable(qwe).filter
+                (user -> Objects.equals(user.getName(), "qwe")).
+                flatMap(user -> Optional.ofNullable(user.getName())).ifPresent(System.out::println);
+    }
 
-    static Optional<User> flatMapMethod() {
-        return Optional.ofNullable(User.builder().build());
+
+    static void test(){
+        User build = User.builder().name("qqq").email("www").build();
+        String s = Optional.ofNullable(build).map(User::getName).orElseGet(() -> Optional.of("123").get());
+        System.out.println(s);
+        User user1 = User.builder().name("a1").build();
+        User user2 = User.builder().name("a2").build();
+        User user3 = User.builder().name("a3").build();
+        ArrayList<User> users = Lists.newArrayList(user1, user2, user3);
+        System.out.println(users);
+    }
+
+
+    //todo stream
+    static Optional<String> flatMapMethod(User user) {
+        return Optional.ofNullable(user.getEmail());
     }
 
 

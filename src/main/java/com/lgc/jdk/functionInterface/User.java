@@ -1,4 +1,4 @@
-package com.lgc.jdk8;
+package com.lgc.jdk.functionInterface;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

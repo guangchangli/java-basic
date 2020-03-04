@@ -1,4 +1,4 @@
-package com.lgc.jdk8.functionInterface;
+package com.lgc.jdk.functionInterface;
 
 /**
  * @author lgc
