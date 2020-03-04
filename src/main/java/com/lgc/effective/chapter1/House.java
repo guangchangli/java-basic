@@ -3,6 +3,7 @@ package com.lgc.effective.chapter1;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * @author lgc
@@ -22,6 +23,7 @@ public class House {
      * @return
      */
     public static House createHouseWithNameAndProvince(String name, String province) {
+        BigInteger bigInteger = BigInteger.valueOf(Integer.MAX_VALUE);
         return House.builder().name(name).province(province).build();
     }
 
