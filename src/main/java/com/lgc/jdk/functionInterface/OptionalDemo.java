@@ -1,13 +1,11 @@
-package com.lgc.jdk.functioninterface;
+package com.lgc.jdk.functionInterface;
 
 import com.google.common.collect.Lists;
-import com.lgc.jdk.functionInterface.User;
 import com.sun.tools.javac.util.Assert;
 
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.function.Consumer;
 
 /**
  * @author lgc
