@@ -1,7 +1,6 @@
 package com.lgc.basic.inner;
 
 import com.lgc.basic.BasicJava;
-import com.lgc.basic.SingletonDemo;
 
 /**
  * 成员内部类 -> 静态内部类 作为外部类的成员 可以访问外部类的静态域
