@@ -1,6 +1,6 @@
 package com.lgc.thread;
 
-import java.util.concurrent.Callable;
+import java.util.concurrent.*;
 
 /**
  * @author lgc
@@ -24,18 +24,37 @@ public class CreateThread {
             System.out.println("implements Runnable create thread");
         }
     }
-    static class Implements implements Callable{
+
+    static class Implements implements Callable<String> {
 
         @Override
-        public Object call() throws Exception {
-            return null;
+        public String call() {
+            System.out.println("implements Callable create thread");
+            return "success";
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         new ExtendThread().start();
         new Thread(new ImplementsThread()).start();
-//        ThreadPoolExecutor
+        new Thread(new FutureTask<>(new Implements())).start();
+        FutureTask<String> future = new FutureTask<>(() -> "hello");
+        Thread thread = new Thread(future);
+//        Thread thread = new Thread(new FutureTask<>(()->"hello future task"));
+        thread.setName("myCallable001");
+        thread.start();
+        while (!future.isDone()) {
+            try {
+                System.out.println("myCallable001 is not done");
+                //等待线程运行结束
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        String result = future.get();
+        System.out.println("result : " + result);
+
     }
 
 }
