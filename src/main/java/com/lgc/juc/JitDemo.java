@@ -1,8 +1,8 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
 /**
- * JIT Just In Time
- *
+ * JIT Just In Time Compiler
+ * 热点代码即使编译机器语言提高效率
  * @author lgc
  **/
 public class JitDemo {

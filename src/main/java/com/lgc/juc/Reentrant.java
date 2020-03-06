@@ -1,4 +1,4 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
 /**
  * synchronized 可重入 必须可重入 父子继承super调用就死锁

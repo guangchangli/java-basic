@@ -1,4 +1,4 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
 /**
  * 线程状态 new start        os(Runnable)

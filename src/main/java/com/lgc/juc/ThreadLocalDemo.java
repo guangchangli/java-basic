@@ -1,6 +1,5 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
-import java.sql.SQLOutput;
 import java.util.concurrent.FutureTask;
 
 /**

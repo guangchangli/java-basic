@@ -1,6 +1,5 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
-import com.sun.org.apache.regexp.internal.RE;
 import lombok.SneakyThrows;
 
 import java.util.concurrent.TimeUnit;

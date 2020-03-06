@@ -1,4 +1,4 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
 import java.util.concurrent.TimeUnit;
 

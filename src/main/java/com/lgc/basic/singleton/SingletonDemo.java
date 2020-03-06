@@ -1,4 +1,4 @@
-package com.lgc.basic;
+package com.lgc.basic.singleton;
 
 /**
  * 单例 保证只有一个实例

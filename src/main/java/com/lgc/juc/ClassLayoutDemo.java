@@ -1,11 +1,11 @@
-package com.lgc.thread;
+package com.lgc.juc;
 
 import org.openjdk.jol.info.ClassLayout;
 
 /**
  * @author lgc
  **/
-public class Cas {
+public class ClassLayoutDemo {
     public static void main(String[] args) {
         Object o = new Object();
         o.hashCode();
