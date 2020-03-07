@@ -4,7 +4,8 @@ import com.lgc.basic.BasicJava;
 
 /**
  * 成员内部类 -> 静态内部类 作为外部类的成员 可以访问外部类的静态域
- *
+ * 非静态内部类可以访问外部类的属性 反之不可以
+ * 静态内部类可以访问外部类的静态状态，访问实例成员需要创建外部类的实例
  * @author lgc
  **/
 public class StaticInner {
@@ -43,7 +44,7 @@ class Outer {
         /**
          * 匿名内部类
          */
-        new BasicJava(){
+        new BasicJava() {
             @Override
             public void normal() {
                 System.out.println("");
@@ -55,6 +56,14 @@ class Outer {
         System.out.println("outer print method out");
     }
 
+    /**
+     * 非静态内部类
+     * 不能含有静态状态
+     */
+    class NoStaticInner{
+         String name="";
+
+    }
     /**
      * 静态成员内部类 归属于类
      */

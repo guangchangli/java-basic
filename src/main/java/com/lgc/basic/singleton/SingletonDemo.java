@@ -2,24 +2,35 @@ package com.lgc.basic.singleton;
 
 /**
  * 单例 保证只有一个实例
+ * 构造私有化 静态变量保存实例
+ * public 公开
  *
  * @author lgc
  **/
 public class SingletonDemo {
 
     private static SingletonDemo instanceLazy;
-    private static SingletonDemo instanceLoad = new SingletonDemo();
+    public static final SingletonDemo instanceLoad;
 
     public SingletonDemo() {
     }
 
+    static {
+        instanceLoad = new SingletonDemo();
+    }
+
     /**
      * 懒汉 需要在创建
-     *
      * @return
      */
-    static SingletonDemo getInstanceLazy() {
-        return instanceLazy == null ? instanceLazy = new SingletonDemo() : instanceLazy;
+    static SingletonDemo getInstanceLazy() throws InterruptedException {
+        if (instanceLazy == null) {
+            synchronized (SingletonDemo.class) {
+                return instanceLazy == null ? instanceLazy = new SingletonDemo() : instanceLazy;
+            }
+        }
+        return instanceLazy;
+
     }
 
     /**
@@ -39,7 +50,4 @@ public class SingletonDemo {
         private static final SingletonDemo INS = new SingletonDemo();
     }
 
-    void normal(){
-
-    }
 }
