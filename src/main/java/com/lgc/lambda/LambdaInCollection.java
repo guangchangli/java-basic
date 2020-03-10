@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author lgc
@@ -135,5 +136,7 @@ public class LambdaInCollection {
         List<String> strings = Arrays.asList("左", "夜", "雨疏风骤", "试问", "卷帘人", "却道", "海棠依旧");
         Spliterator<String> spliterator = strings.spliterator();
         spliterator.forEachRemaining(s -> System.out.println(s));
+        List<Object> objects = new ArrayList<>();
+        Stream<Object> stream = objects.stream();
     }
 }
