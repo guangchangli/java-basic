@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e6444f5-a075-48d3-b70d-1a929500130a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/basic/DefaultValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/basic/reflect/LoadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/basic/reflect/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/decorator/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/decorator/ConcreteApple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/decorator/ConcreteDecoratorA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/decorator/ConcreteDecoratorB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/decorator/Decorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lgc/pattern/decorator/DecoratorDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lgc/juc/Thread_Sleep_Yield_Join.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lgc/juc/Thread_Sleep_Yield_Join.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +73,13 @@
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
-    <configuration name="BioServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lgc.io.bio.BioServer" />
+  <component name="RunManager" selected="Application.DecoratorDemo">
+    <configuration name="CglibDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.proxy.cglib.CglibDemo" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lgc.io.bio.*" />
+          <option name="PATTERN" value="com.lgc.pattern.proxy.cglib.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lgc.io.bio.Client" />
+    <configuration name="DecoratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.decorator.DecoratorDemo" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lgc.io.bio.*" />
+          <option name="PATTERN" value="com.lgc.pattern.decorator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +100,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProxyFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.proxy.ProxyFactory" />
+    <configuration name="LoadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.basic.reflect.LoadTest" />
+      <module name="java-basic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lgc.basic.reflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaticProxyDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.proxy.StaticProxyDao" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
@@ -107,25 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Redis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lgc.io.nio.Redis" />
+    <configuration name="TestJdkProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lgc.pattern.proxy.TestJdkProxy" />
       <module name="java-basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lgc.io.nio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringLocation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lgc.jvm.StringLocation" />
-      <module name="java-basic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lgc.jvm.*" />
+          <option name="PATTERN" value="com.lgc.pattern.proxy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,19 +140,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ProxyFactory" />
-      <item itemvalue="Application.StringLocation" />
-      <item itemvalue="Application.BioServer" />
-      <item itemvalue="Application.Client" />
-      <item itemvalue="Application.Redis" />
+      <item itemvalue="Application.LoadTest" />
+      <item itemvalue="Application.DecoratorDemo" />
+      <item itemvalue="Application.CglibDemo" />
+      <item itemvalue="Application.StaticProxyDao" />
+      <item itemvalue="Application.TestJdkProxy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Redis" />
-        <item itemvalue="Application.BioServer" />
-        <item itemvalue="Application.StringLocation" />
-        <item itemvalue="Application.ProxyFactory" />
+        <item itemvalue="Application.DecoratorDemo" />
+        <item itemvalue="Application.TestJdkProxy" />
+        <item itemvalue="Application.StaticProxyDao" />
+        <item itemvalue="Application.CglibDemo" />
+        <item itemvalue="Application.LoadTest" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +193,8 @@
       <workItem from="1581390044432" duration="6106000" />
       <workItem from="1585371441152" duration="648000" />
       <workItem from="1585460626032" duration="723000" />
-      <workItem from="1585488858305" duration="1194000" />
+      <workItem from="1585488858305" duration="1322000" />
+      <workItem from="1585541395473" duration="4736000" />
     </task>
     <task id="LOCAL-00001" summary="add io">
       <created>1581428027521</created>
@@ -196,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581428027521</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix 'thread'">
+      <created>1585492278683</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585492278683</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +218,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add io" />
-    <option name="LAST_COMMIT_MESSAGE" value="add io" />
+    <MESSAGE value="fix 'thread'" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 'thread'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="429" y="190" key="#Project_Structure" timestamp="1581390178715">
@@ -223,29 +238,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1581392038825" />
-    <state x="423" y="123" key="CommitChangelistDialog2" timestamp="1581428027362">
+    <state x="423" y="123" key="CommitChangelistDialog2" timestamp="1585492278560">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="423" y="123" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581428027362" />
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1581518551395">
+    <state x="423" y="123" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585492278560" />
+    <state width="1638" height="160" key="GridCell.Tab.0.bottom" timestamp="1585560035336">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1581518551395" />
+    <state width="1638" height="160" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585560035336" />
     <state width="1638" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934648" />
-    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1581518551394">
+    <state width="1638" height="160" key="GridCell.Tab.0.center" timestamp="1585560035335">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1581518551394" />
+    <state width="1638" height="160" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585560035335" />
     <state width="1638" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934647" />
-    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1581518551393">
+    <state width="1638" height="160" key="GridCell.Tab.0.left" timestamp="1585560035334">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1581518551393" />
+    <state width="1638" height="160" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585560035334" />
     <state width="1638" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934647" />
-    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1581518551394">
+    <state width="1638" height="160" key="GridCell.Tab.0.right" timestamp="1585560035336">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1581518551394" />
+    <state width="1638" height="160" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585560035336" />
     <state width="1638" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578897934648" />
     <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1581518551396">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -267,14 +282,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585464031795" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1585492282604">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585492282603" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1585463223542">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585463223542" />
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1585460647662">
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1585560521552">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585460647662" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585560521552" />
     <state x="630" y="445" key="svn.upgradeDialog" timestamp="1578972249475">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
