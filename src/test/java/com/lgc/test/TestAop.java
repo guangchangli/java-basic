@@ -3,12 +3,8 @@ package com.lgc.test;
 import com.lgc.spring.aop.AopConfig;
 import com.lgc.spring.aop.MathCalculator;
 import com.lgc.spring.aop.MyService;
-import com.lgc.spring.aop.ServiceImpl;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author lgc

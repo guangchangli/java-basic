@@ -33,7 +33,7 @@ public class ThreadExceptionInterrupted {
 
     public static void main(String[] args) {
         ThreadExceptionInterrupted threadExceptionInterrupted = new ThreadExceptionInterrupted();
-        Runnable r = () -> threadExceptionInterrupted.m();
+        Runnable r = threadExceptionInterrupted::m;
         new Thread(r, "t1").start();
         new Thread(r, "t2").start();
     }

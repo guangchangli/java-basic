@@ -31,7 +31,7 @@ public class Thread_Sleep_Yield_Join {
             }
         }).start();
     }
-    // 放弃cpu 让拥有同样优先级的线程获取执行机会 状态转为就绪 等待cpu执行 时间片的暂时让出
+    // 放弃cpu 让拥有同样优先级的线程获取执行机会 状态转为就绪 等待pu执行 时间片的暂时让出
     static void testYield() {
         new Thread(() -> {
             for (int i = 0; i < 5; i++) {

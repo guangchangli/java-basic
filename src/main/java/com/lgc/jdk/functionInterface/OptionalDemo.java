@@ -14,10 +14,10 @@ public class OptionalDemo {
     public static void main(String[] args) {
         //createEmptyOptional();
 //        createInstance();
-//        orElse();
+        orElse();
 //        changeValue();
 //        filterDemo();
-        test();
+//        test();
     }
 
     static void createEmptyOptional() {
