@@ -1,7 +1,6 @@
 package com.lgc.jdk.functionInterface;
 
 import com.google.common.collect.Lists;
-import com.sun.tools.javac.util.Assert;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -37,8 +36,8 @@ public class OptionalDemo {
         System.out.println(user1);
         System.out.println(Optional.empty());
         //验证是否有值 isPresent this.value !=null
-        Assert.check(opt.isPresent());
-        opt.ifPresent((u -> Assert.check(u.getName().length() > 2)));
+//        Assert.check(opt.isPresent());
+//        opt.ifPresent((u -> Assert.check(u.getName().length() > 2)));
         //orElse 如果有值返回 为空返回 入参
         User user2 = Optional.ofNullable(user).orElse(user);
     }

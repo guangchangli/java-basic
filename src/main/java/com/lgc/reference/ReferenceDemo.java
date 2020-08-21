@@ -19,7 +19,7 @@ public class ReferenceDemo {
         System.gc();
         System.out.println(student);
         //软引用  jvm内存不足才会回收
-        SoftReference<Student> studentSoftReference = new SoftReference<Student>(new Student());
+        SoftReference<Student> studentSoftReference = new SoftReference<>(new Student());
         System.out.println(studentSoftReference.get());
         System.gc();
         System.out.println(studentSoftReference.get());
@@ -50,7 +50,5 @@ public class ReferenceDemo {
         System.out.println(reference.get());
         System.out.println(queue1);
         System.out.println("---虚引用---");
-
-
     }
 }
